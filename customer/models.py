@@ -20,6 +20,7 @@ class Customer(models.Model):
     customername = models.CharField(max_length=100)
     customerlan = models.DecimalField(max_digits=9, decimal_places=6)
     customerlon = models.DecimalField(max_digits=9, decimal_places=6)
+    customerrad = models.IntegerField(default=0)
 
     def __str__(self):
         return self.customerid

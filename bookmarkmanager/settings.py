@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'customer',
     'rest_framework',
     'django_filters',
+    'drf_multiple_model',
 ]
 
 MIDDLEWARE = [
