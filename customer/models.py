@@ -7,6 +7,8 @@ class Bookmark(models.Model):
     title = models.CharField(max_length=100)
     url = models.CharField(max_length=100)
     sourcename = models.CharField(max_length=100)
+    creationdate = models.DateField(default='2020-05-14')
+    # creationdate.editable=True
 
     def __str__(self):
         return self.bid

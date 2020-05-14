@@ -6,7 +6,7 @@ from .models import Bookmark
 class BookmarkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bookmark
-        fields = ('bid', 'title', 'url', 'sourcename')
+        fields = ('bid', 'title', 'url', 'sourcename','creationdate')
 
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:

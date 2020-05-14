@@ -20,17 +20,8 @@ class BookmarkViewset(viewsets.ModelViewSet):
     queryset = Bookmark.objects.all()
 
 class BrowseViewset(viewsets.ModelViewSet):
-    # def get_querylist(self):
-    #     serializer_class1 = CustomerSerializer
-    #     serializer_class2 = BookmarkSerializer
-    #     queryset1 = Customer.objects.all()
-    #     queryset2 = Bookmark.objects.all()
-    #     querylist = (
-    #         {'queryset': queryset1, 'serializer_class': serializer_class1},
-    #         {'queryset': queryset2, 'serializer_class': serializer_class2},
-    #     )
     serializer_class = BookmarkSerializer
     queryset = Bookmark.objects.all()
     filter_backends = (DjangoFilterBackend,OrderingFilter,)
-    filter_fields = ('customer__customerid', 'customer__customerlan', 'customer__customerlon',)
+    filter_fields = ('customer__customerid', 'customer__customerlan', 'customer__customerlon','creationdate')
     OrderingFields = ('title')
