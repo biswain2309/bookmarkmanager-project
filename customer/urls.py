@@ -5,8 +5,8 @@ from customer import views
 
 router = routers.DefaultRouter()
 router.register('_api/create', views.CustomerViewset)
-router.register('add', views.BookmarkViewset)
-router.register('_api/browse', views.BrowseViewset, basename ='_api/browse')
+router.register('add', views.BookmarkViewSet)
+router.register('_api/browse', views.BrowseViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
