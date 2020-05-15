@@ -12,15 +12,18 @@ from .models import Customer
 from .models import Bookmark
 
 class CustomerViewset(viewsets.ModelViewSet):
+    """Handling creating, listing customer feed items"""
     serializer_class = CustomerSerializer
     queryset = Customer.objects.all()
     
 
 class BookmarkViewSet(viewsets.ModelViewSet):
+    """Handling creating, listing bookmark feed items"""
     serializer_class = BookmarkSerializer
     queryset = Bookmark.objects.all()
 
 class BrowseViewSet(viewsets.ModelViewSet):
+    """Searching and filtering bookmark feed items"""
     serializer_class = BookmarkSerializer
     queryset = Bookmark.objects.all()
     filter_backends = (DjangoFilterBackend, SearchFilter, OrderingFilter)

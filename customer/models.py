@@ -3,6 +3,7 @@ from django.db import models
 
 
 class Bookmark(models.Model):
+    """Create a model for Bookmark"""
     bid = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     url = models.CharField(max_length=100)
@@ -15,6 +16,7 @@ class Bookmark(models.Model):
 
 
 class Customer(models.Model):
+    """Create a model for Customer"""
     bookmark = models.ForeignKey(
         Bookmark, on_delete=models.SET_NULL, null=True
     )
